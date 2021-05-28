@@ -4,6 +4,7 @@
 //import static org.hamcrest.CoreMatchers.is;
 //import static org.hamcrest.core.IsNot.not;
 package ru.stqa.pft.sandbox;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -18,50 +19,46 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
+
 import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
+
+import org.testng.annotations.*;
 
 public class StartTest {
-  private WebDriver driver;
-  private Map<String, Object> vars;
-  JavascriptExecutor js;
+    private WebDriver driver;
+//    private Map<String, Object> vars;
+//    JavascriptExecutor js;
 
-  @BeforeTest
-  public void setUp() {
+    @BeforeMethod
+    public void setUp() {
 //    driver = new FirefoxDriver();
 //    js = (JavascriptExecutor) driver;
 //    vars = new HashMap<String, Object>();
-    System.setProperty("webdriver.chrome.driver", "C:\\Driver\\chromedriver.exe");
-    ChromeDriver driver = new ChromeDriver();
-    driver.get("https://webtrader.roboforex.com/");
-    driver.findElement(By.xpath("//div[@class='button button_type_brand']")).click();
+        System.setProperty("webdriver.chrome.driver", "C:\\Driver\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get("https://webtrader.roboforex.com/");
+//    driver.findElement(By.xpath("//div[@class='button button_type_brand']")).click();
+    }
 
-
-  }
-
-
-  @Test
-  public void start() {
-//    driver.get("https://webtrader.roboforex.com/");
+    @Test
+    public void testLogin() {
+        driver.findElement(By.xpath("//div[@class='button button_type_brand']")).click();
 //    driver.manage().window().setSize(new Dimension(550, 708));
 //    driver.findElement(By.cssSelector(".button_type_quick-demo")).click();
 //    driver.findElement(By.cssSelector("//div[@class='button button_type_brand']")).click();
 //    driver.findElement(By.cssSelector("//div[@class='button button_type_brand']")).click();
-    //div[@class='button button_type_brand']
+        //div[@class='button button_type_brand']
 //    driver.findElement(By.className("button button_type_brand")).click();
 
 //    WebElement element = driver.findElement(By.xpath("//div[@class='button button_type_brand button_enabled_false']"));
 //    element.click();
+    }
 
 
-  }
-//
-//  @AfterTest
-//  public void tearDown() {
-//    driver.quit();
-//  }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 }
