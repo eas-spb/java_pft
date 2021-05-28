@@ -1,4 +1,4 @@
-package ru.stqa.pft.sandbox;
+package ru.stqa.pft.sandbox.tests;
 
 import com.sun.tracing.dtrace.Attributes;
 import org.testng.annotations.Test;
