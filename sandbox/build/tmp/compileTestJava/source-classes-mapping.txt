@@ -1,7 +1,11 @@
-ru/stqa/pft/sandbox/appmanager/AuthorizationHelper.java
- ru.stqa.pft.sandbox.appmanager.AuthorizationHelper
 ru/stqa/pft/sandbox/tests/SquareTest.java
  ru.stqa.pft.sandbox.tests.SquareTest
+ru/stqa/pft/sandbox/appmanager/AuthorizationHelper.java
+ ru.stqa.pft.sandbox.appmanager.AuthorizationHelper
+ru/stqa/pft/sandbox/appmanager/RegistrationHelper.java
+ ru.stqa.pft.sandbox.appmanager.RegistrationHelper
+ru/stqa/pft/sandbox/appmanager/NavigationHelper.java
+ ru.stqa.pft.sandbox.appmanager.NavigationHelper
 ru/stqa/pft/sandbox/tests/TestBase.java
  ru.stqa.pft.sandbox.tests.TestBase
 ru/stqa/pft/sandbox/tests/AuthorizationTest.java

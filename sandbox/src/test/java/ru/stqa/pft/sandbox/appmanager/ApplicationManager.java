@@ -1,27 +1,38 @@
 package ru.stqa.pft.sandbox.appmanager;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ApplicationManager {
+    WebDriver driver;
 
-
-    private final AuthorizationHelper authorizationHelper = new AuthorizationHelper();
+    private RegistrationHelper registrationHelper;
+    private AuthorizationHelper authorizationHelper;
+    private NavigationHelper navigationHelper;
 
     public void init() {
         System.setProperty("webdriver.chrome.driver", "C:\\Driver\\chromedriver.exe");
-        authorizationHelper.driver = new ChromeDriver();
-        openPage();
-    }
+        driver = new ChromeDriver();
+        authorizationHelper = new AuthorizationHelper(driver);
+        registrationHelper = new RegistrationHelper(driver);
+        navigationHelper = new NavigationHelper(driver);
+        navigationHelper.openPage();
 
-    private void openPage() {
-        authorizationHelper.driver.get("https://webtrader.roboforex.com/");
     }
 
     public void stop() {
-        authorizationHelper.driver.quit();
+        driver.quit();
     }
 
     public AuthorizationHelper getAuthorizationHelper() {
         return authorizationHelper;
+    }
+
+    public RegistrationHelper getRegistrationHelper() {
+        return registrationHelper;
+    }
+
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
     }
 }
