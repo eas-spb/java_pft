@@ -11,7 +11,7 @@ public class AuthorizationHelper {
     }
 
     public void setPassword(String password) {
-        driver.findElement(By.xpath("//input[@class='password__field password__field_mode_password']")).sendKeys("password");
+        driver.findElement(By.xpath("//input[@class='password__field password__field_mode_password']")).sendKeys(password);
     }
 
     public void setLogin(String login) {

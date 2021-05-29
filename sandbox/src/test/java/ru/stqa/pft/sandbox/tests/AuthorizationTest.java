@@ -5,15 +5,20 @@
 //import static org.hamcrest.core.IsNot.not;
 package ru.stqa.pft.sandbox.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class AuthorizationTest extends TestBase {
 
     @Test
     public void testLogin() {
-        app.getAuthorizationHelper().setLogin("jowig50885@isecv.com");
-        app.getAuthorizationHelper().setPassword("z119f0a5A");
+        app.getAuthorizationHelper().setLogin("qatest3003+1@gmail.com");
+        app.getAuthorizationHelper().setPassword("33964AA");
         app.getAuthorizationHelper().loginButtonClick();
+        app.getNavigationHelper().sleep(2000);
+        app.getNavigationHelper().tourWindowCloseButton();
+        app.getNavigationHelper().sleep(3000);
+        Assert.assertTrue(app.getNavigationHelper().isElementDisplayed());
     }
 
 }
