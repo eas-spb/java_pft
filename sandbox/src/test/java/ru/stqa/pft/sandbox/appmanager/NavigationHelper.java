@@ -2,10 +2,6 @@ package ru.stqa.pft.sandbox.appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-
-import java.util.Objects;
-import java.util.logging.Logger;
 
 public class NavigationHelper {
     private WebDriver driver;
@@ -24,7 +20,6 @@ public class NavigationHelper {
 
     public void tourWindowCloseButton() {
         driver.findElement(By.xpath("//span[@class='tour-window__close']")).click();
-
     }
 
     public void sleep(int n) {
@@ -34,20 +29,5 @@ public class NavigationHelper {
             e.printStackTrace();
         }
     }
-
-//
-//    public boolean logoutButtonIsDisplayed() {
-//        driver.findElement(By.xpath("//span[@class='user-info__logout']")).isDisplayed();
-//
-//    }
-
-    public boolean isElementDisplayed() {
-        try {
-            return driver.findElement(By.xpath("//div[@class='user-info__logout']")).isDisplayed();
-        } catch (NoSuchElementException | TimeoutException | NullPointerException e) {
-            return false;
-        }
-    }
-
 
 }

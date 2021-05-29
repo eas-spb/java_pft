@@ -17,7 +17,8 @@ public class RegistrationHelper {
     }
 
     public void setEmail() {
-        driver.findElement(By.xpath("//input[@class='input__field input__field_mode_email']")).sendKeys("qatest3003+6@gmail.com");
+        driver.findElement(By.xpath("//input[@class='input__field input__field_mode_email']")).sendKeys("qatest3003+"+Math.random()+"@gmail.com");
+
     }
 
     public void setName() {

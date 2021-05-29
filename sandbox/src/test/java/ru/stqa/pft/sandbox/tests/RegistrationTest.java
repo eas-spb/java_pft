@@ -3,10 +3,10 @@ package ru.stqa.pft.sandbox.tests;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class RegistrationTest extends TestBase{
+public class RegistrationTest extends TestBase {
 
     @Test
-    public void testRegistration(){
+    public void testRegistration() {
         app.getRegistrationHelper().registrationButtonClick();
         app.getRegistrationHelper().setEmail();
         app.getRegistrationHelper().setName();
@@ -16,9 +16,6 @@ public class RegistrationTest extends TestBase{
         app.getNavigationHelper().sleep(3000);
         Assert.assertTrue(app.getRegistrationHelper().isDemoAccountDetailsModalWindowDisplayed());
     }
-
-
-
 
 
 }

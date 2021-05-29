@@ -9,7 +9,6 @@ public class ApplicationManager {
     private RegistrationHelper registrationHelper;
     private AuthorizationHelper authorizationHelper;
     private NavigationHelper navigationHelper;
-    private WebDriverHelper webDriverHelper;
 
     public void init() {
         System.setProperty("webdriver.chrome.driver", "C:\\Driver\\chromedriver.exe");
@@ -17,8 +16,6 @@ public class ApplicationManager {
         authorizationHelper = new AuthorizationHelper(driver);
         registrationHelper = new RegistrationHelper(driver);
         navigationHelper = new NavigationHelper(driver);
-        webDriverHelper = new WebDriverHelper(driver);
-//        private WebDriverHelper webDriverHelper;
         navigationHelper.openPage();
         navigationHelper.allowCookiesButtonClick();
 
@@ -39,6 +36,4 @@ public class ApplicationManager {
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
-
-    public WebDriverHelper getWebDriverHelper() {return webDriverHelper;}
 }

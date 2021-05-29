@@ -12,13 +12,11 @@ public class AuthorizationTest extends TestBase {
 
     @Test
     public void testLogin() {
-        app.getAuthorizationHelper().setLogin("qatest3003+1@gmail.com");
-        app.getAuthorizationHelper().setPassword("33964AA");
+        app.getAuthorizationHelper().setLogin();
+        app.getAuthorizationHelper().setPassword();
         app.getAuthorizationHelper().loginButtonClick();
-        app.getNavigationHelper().sleep(2000);
-        app.getNavigationHelper().tourWindowCloseButton();
         app.getNavigationHelper().sleep(3000);
-        Assert.assertTrue(app.getNavigationHelper().isElementDisplayed());
+        Assert.assertTrue(app.getAuthorizationHelper().isElementTourWindowDisplayed());
     }
 
 }
