@@ -39,7 +39,8 @@ public class RegistrationHelper {
 
     public boolean isDemoAccountDetailsModalWindowDisplayed() {
         try {
-            return driver.findElement(By.xpath("//span[text()='Demo Account details']")).isDisplayed();
+//            return driver.findElement(By.xpath("//span[text()='Demo Account details']")).isDisplayed();
+            return driver.findElement(By.xpath("//span[@class='modal-window__title'][contains(text(),'Demo Account details')]")).isDisplayed();
         } catch (NoSuchElementException | TimeoutException | NullPointerException e) {
             return false;
         }

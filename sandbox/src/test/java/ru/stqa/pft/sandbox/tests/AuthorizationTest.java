@@ -15,7 +15,7 @@ public class AuthorizationTest extends TestBase {
         app.getAuthorizationHelper().setLogin();
         app.getAuthorizationHelper().setPassword();
         app.getAuthorizationHelper().loginButtonClick();
-        app.getNavigationHelper().sleep(3000);
+        app.getNavigationHelper().sleep(5000);
         Assert.assertTrue(app.getAuthorizationHelper().isElementTourWindowDisplayed());
     }
 

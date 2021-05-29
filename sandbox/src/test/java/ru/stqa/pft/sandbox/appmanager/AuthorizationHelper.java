@@ -26,7 +26,7 @@ public class AuthorizationHelper {
 
     public boolean isElementTourWindowDisplayed() {
         try {
-            return driver.findElement(By.xpath("//div[@class='tour-window__frame']")).isDisplayed();
+            return driver.findElement(By.xpath("//span[@class='tour-window__title'][contains(text(),'RoboForex WebTrader Overview')]")).isDisplayed();
         } catch (NoSuchElementException | TimeoutException | NullPointerException e) {
             return false;
         }
